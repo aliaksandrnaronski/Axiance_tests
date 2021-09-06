@@ -1,7 +1,6 @@
 import Chance from 'chance'
 import SearchResultsPage from '../../page-objects/searchResultsPage'
 import AccessoriesPage from '../../page-objects/accessoriesPage'
-import accessoriesPage from "../../page-objects/accessoriesPage";
 
 /*describe('Test fors] reqres', () => {
     it('Positive: Search', () => {
@@ -22,11 +21,11 @@ describe('UI Tests', () => {
             cy.wrap(data).as('productData')
         })
     })
+    Cypress.on('uncaught:exception', (err, runnable) => {
+        return false;
+    });
     it('Positive: Search', () => {
         cy.get('@productData').then((productData) => {
-            Cypress.on('uncaught:exception', (err, runnable) => {
-                return false;
-            });
             cy.log("GIVEN User is at Accessories Page")
             AccessoriesPage.open()
             cy.log("WHEN User search product by name")
@@ -34,9 +33,6 @@ describe('UI Tests', () => {
             cy.log("Search results")
             SearchResultsPage.getProductByDocId(productData.url).should('exist')
         })
-
-
-
     })
 })
 
