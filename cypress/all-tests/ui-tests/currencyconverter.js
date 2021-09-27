@@ -8,7 +8,6 @@ describe('Array Task #10', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
     });
-
     it('Array', () => {
 
 

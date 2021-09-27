@@ -102,7 +102,7 @@ describe('UI Tests', () => {
         );
         cy.log(sum)
 
-        cy.log("Задание 5");
+        cy.log("Задание 5+");
         function getPlanetsWithDistance(item) {
             if (item.distance > 15) {
                 return true;
