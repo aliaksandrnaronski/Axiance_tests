@@ -24,6 +24,7 @@ describe('UI Tests', () => {
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
     });
+
     it('Positive: Search', () => {
         cy.get('@productData').then((productData) => {
             cy.log("GIVEN User is at Accessories Page")
