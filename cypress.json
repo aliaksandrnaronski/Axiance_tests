@@ -1,8 +1,10 @@
 {
   "baseUrl": "https://reqres.in",
   "integrationFolder": "cypress/all-tests",
-  "projectId": "xutpp8",
+  "projectId": "u1yaan",
   "env": {
-    "googleURL": "https://store.google.com/us"
-  }
+    "axianceURL": "https://axiance.com/"
+  },
+  "viewportWidth": 1025,
+  "viewportHeight": 800
 }

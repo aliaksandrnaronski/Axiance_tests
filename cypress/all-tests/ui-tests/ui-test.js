@@ -2,7 +2,7 @@ import Chance from 'chance'
 import SearchResultsPage from '../../page-objects/searchResultsPage'
 import AccessoriesPage from '../../page-objects/accessoriesPage'
 
-/*describe('Test fors] reqres', () => {
+describe('Test fors] reqres', () => {
     it('Positive: Search', () => {
 
         Cypress.on('uncaught:exception', (err, runnable) => {
@@ -13,7 +13,7 @@ import AccessoriesPage from '../../page-objects/accessoriesPage'
         cy.get('input[aria-label="Search Google Store"]').type(`Google Pixelbook Pen Replacement Tips{enter}`)
         cy.get('a[href="/product/google_pixelbook_pen_replacement_tips"]').should('exist')
     })
-})*/
+})
 
 describe('UI Tests', () => {
     before(() => {
