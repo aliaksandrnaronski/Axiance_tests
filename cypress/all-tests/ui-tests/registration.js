@@ -1,4 +1,4 @@
-describe('Login', () => {
+/*describe('Login', () => {
     beforeEach(() => {
         cy.fixture('sign_up').then(data => {
             cy.wrap(data).as('registration')
@@ -20,7 +20,7 @@ describe('Login', () => {
             cy.get('a[href="https://client.axiance.com/int/sign-up/live?"]').invoke('attr', 'href').then(myLink => {
                 cy.visit(myLink, {failOnStatusCode: false});
             })*/
-            cy.get('input[placeholder="First Name*"]').type(`${registration.firstName}`)
+           /* cy.get('input[placeholder="First Name*"]').type(`${registration.firstName}`)
             cy.get('input[placeholder="Last Name*"]').type(`${registration.lastName}`)
             cy.get('input[placeholder="Enter your Email*"]').type(`${registration.email}`)
             //cy.get('div[id="countryResidence"]').click()
@@ -36,3 +36,4 @@ describe('Login', () => {
         })
     })
 })
+*/
