@@ -1,4 +1,4 @@
-import Chance from 'chance'
+/*import Chance from 'chance'
 import SearchResultsPage from '../../page-objects/searchResultsPage'
 import AccessoriesPage from '../../page-objects/accessoriesPage'
 
@@ -39,4 +39,4 @@ describe('UI Tests', () => {
 
 
 
-
+*/

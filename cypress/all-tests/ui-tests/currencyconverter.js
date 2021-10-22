@@ -1,4 +1,4 @@
-import Chance from 'chance'
+/*import Chance from 'chance'
 describe('Array Task #10', () => {
     before(() => {
         cy.fixture('currency').then(data => {
@@ -28,3 +28,4 @@ describe('Array Task #10', () => {
 
     })
 })
+*/

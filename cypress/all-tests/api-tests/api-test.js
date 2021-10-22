@@ -1,4 +1,4 @@
-import Chance from 'chance'
+/*import Chance from 'chance'
 describe('Test fors] reqres', () => {
     before(() => {
         cy.visit('https://example.cypress.io/commands/actions')
@@ -56,4 +56,4 @@ describe('Test fors] reqres', () => {
         })
     })
 
-
+*/
