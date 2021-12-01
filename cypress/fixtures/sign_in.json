@@ -1,5 +1,9 @@
 {
   "emailFSA": "aleksandrnaronskij+68@gmail.com",
   "emailCySEC": "aleksandrnaronskij+164@gmail.com",
-  "password": "Paulaner123."
+  "password": "Paulaner123.",
+  "wrongemailFSA": "aleksandrnaronskij+666666@gmail.com",
+  "wrongemailCySEC": "aleksandrnaronskij+777777@gmail.com",
+  "emailFSAforTA": "aleksandrnaronskij+58@gmail.com",
+  "emailCySECforTA": "aleksandrnaronskij+58@gmail.com"
 }
