@@ -6,11 +6,6 @@ describe('Switch to this acc and deposit', () => {
             cy.wrap(data).as('loginData')
         })
     })
-    before(() => {
-        cy.fixture('tradeAccs').then(data => {
-            cy.wrap(data).as('tradeAccData')
-        })
-    })
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
     });
@@ -31,6 +26,8 @@ describe('Switch to this acc and deposit', () => {
             TradeAccPage.searchDepositText;
             TradeAccPage.SummField();
             TradeAccPage.searchSuccess;
+            TradeAccPage.ButtonGoToPlatformClick();
+            TradeAccPage.searchContainer;
         })
     })
 })

@@ -32,3 +32,5 @@ export var textChangeYourPassword= '.style_default__1exWx.style_wb__2z8Ro.style_
 export var buttonChange= '.style_button__1T3Pb.styles_submitButton__3yTMy'
 export var summField= '#summ'
 export var success= '.styles_popUpContentTitle__1rcnr'
+export var buttonGoToPlatform = '.style_button__1T3Pb.styles_popUpContentButton__gjZCm'
+export var container = 'styles_container__1O3h2 '

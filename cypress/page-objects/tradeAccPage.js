@@ -1,9 +1,9 @@
 import {
     accountsTab,
     accSettings, buttonChange,
-    buttonDeposit,
+    buttonDeposit, buttonGoToPlatform,
     buttonSwitch,
-    changePassword,
+    changePassword, container,
     createAccButton,
     depositFunds,
     inputEmail, inputEnterPassword,
@@ -154,6 +154,15 @@ class TradeAccPage {
     }
     get searchSuccess(){
         return cy.get(`${success}`).contains("Your deposit was successful!")
+    }
+    get searchButtonGoToPlatform(){
+        return cy.get(`${buttonGoToPlatform}`)
+    }
+    ButtonGoToPlatformClick(){
+        this.searchButtonGoToPlatform.click();
+    }
+    get searchContainer(){
+        return cy.get(`${container}`).should("not.be.visible")
     }
 
 }
