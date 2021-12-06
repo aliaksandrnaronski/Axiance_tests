@@ -8,7 +8,7 @@ import {
     depositFunds,
     inputEmail, inputEnterPassword,
     inputPassword,
-    platformType, summField,
+    platformType, success, summField,
     tab,
     tabActive,
     tabLiveDemo,
@@ -152,5 +152,9 @@ class TradeAccPage {
     SummField(){
         this.searchSummField.type(`10000{enter}`);
     }
+    get searchSuccess(){
+        return cy.get(`${success}`).contains("Your deposit was successful!")
+    }
+
 }
 export default new TradeAccPage()

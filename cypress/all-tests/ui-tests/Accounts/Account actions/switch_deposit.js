@@ -30,6 +30,7 @@ describe('Switch to this acc and deposit', () => {
             TradeAccPage.ButtonDepositClick();
             TradeAccPage.searchDepositText;
             TradeAccPage.SummField();
+            TradeAccPage.searchSuccess;
         })
     })
 })
