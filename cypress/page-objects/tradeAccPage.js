@@ -162,7 +162,7 @@ class TradeAccPage {
         this.searchButtonGoToPlatform.click();
     }
     get searchContainer(){
-        return cy.get(`${container}`).should("not.exist)
+        return cy.get(`${container}`).should("not.exist")
     }
 
 }
