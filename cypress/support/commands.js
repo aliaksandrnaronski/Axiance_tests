@@ -81,8 +81,6 @@ Cypress.Commands.add('chooseRandomAmountAndCurrency', () => {
 })
 
 
-//вынести все локаторы в отдельный файл и присвоить им переменную
-
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

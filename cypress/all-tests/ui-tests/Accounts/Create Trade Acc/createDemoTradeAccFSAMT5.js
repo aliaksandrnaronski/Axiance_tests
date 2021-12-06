@@ -1,6 +1,6 @@
-import LoginPage from "../../../page-objects/loginPage";
-import TradeAccPage from "../../../page-objects/tradeAccPage";
-describe('Trade Accs', () => {
+import LoginPage from "../../../../page-objects/loginPage";
+import TradeAccPage from "../../../../page-objects/tradeAccPage";
+describe('Create Trade Acc', () => {
     before(() => {
         cy.fixture('sign_in').then(data => {
             cy.wrap(data).as('loginData')
@@ -28,7 +28,7 @@ describe('Trade Accs', () => {
             TradeAccPage.CreateAccButtonClick();
             TradeAccPage.DemoTradeAccClick();
             TradeAccPage.ChoosePlatformClick();
-            TradeAccPage.PlatformMT4Click();
+            TradeAccPage.PlatformMT5Click();
             cy.chooseRandomLeveragesFSA();
             cy.chooseRandomAmountAndCurrency();
             //TradeAccPage.EnterTradeAccPassword();
