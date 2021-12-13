@@ -12,13 +12,13 @@ describe('Login', () => {
 it('Positive: Login on CySEC with CySEC data', () => {
     LoginPage.open()
     LoginPage.signInClick()
-    LoginPage.CySECIconClick()})
+    LoginPage.clickCySECIcon()})
 
 it('New url', () => {
     cy.get('@loginData').then((loginData) => {
         LoginPage.openNewUrlCySEC()
         LoginPage.login(loginData.emailCySEC, loginData.password)
-        LoginPage.SearchSideBar()
+        LoginPage.searchSideBar()
     })
 })
 })

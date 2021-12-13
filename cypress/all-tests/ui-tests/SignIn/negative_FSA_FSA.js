@@ -9,15 +9,14 @@ describe('Login', () => {
         return false;
     });
 
-    it('Positive: Login on FSA with FSA data', () => {
+    it('Negative: Login on FSA with wrong FSA data', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open()
-            cy.wait(1000)
             LoginPage.signInClick()
-            LoginPage.FSAIconClick()
+            LoginPage.clickFSAIcon()
             LoginPage.openNewUrlFSA()
-            LoginPage.login(loginData.emailFSA, loginData.password)
-            LoginPage.SearchSideBar()
+            LoginPage.login(loginData.wrongemailFSA, loginData.password)
+            LoginPage.enterWrongLoginData()
         })
     })
 })

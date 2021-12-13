@@ -5,8 +5,7 @@ import {
     buttonSwitch,
     changePassword, container,
     createAccButton,
-    depositFunds,
-    inputEmail, inputEnterPassword,
+    depositFunds, inputEnterPassword,
     inputPassword,
     platformType, success, summField,
     tab,
@@ -22,50 +21,26 @@ class TradeAccPage {
     get searchAccountsTab(){
         return cy.get(`${accountsTab}`).contains("Accounts")
     }
-    AccountsTabClick(){
-        this.searchAccountsTab.click();
-    }
     get searchCreateAccButton(){
         return cy.get(`${createAccButton}`).contains("+ CREATE NEW ACCOUNT")
-    }
-    CreateAccButtonClick(){
-        this.searchCreateAccButton.click();
     }
     get searchLiveTradeAcc(){
         return cy.get(`${typeTradeAcc}`).contains("Live Account")
     }
-    LiveTradeAccClick(){
-        this.searchLiveTradeAcc.click();
-    }
     get searchDemoTradeAcc(){
         return cy.get(`${typeTradeAcc}`).contains("Demo Account")
-    }
-    DemoTradeAccClick(){
-        this.searchDemoTradeAcc.click();
     }
     get searchChoosePlatform(){
         return cy.get(`${platformType}`)
     }
-    ChoosePlatformClick(){
-        this.searchChoosePlatform.click();
-    }
     get searchPlatformMT4(){
         return cy.get(`${value}`).contains("MT4")
-    }
-    PlatformMT4Click(){
-        this.searchPlatformMT4.click();
     }
     get searchPlatformMT5(){
         return cy.get(`${value}`).contains("MT5")
     }
-    PlatformMT5Click(){
-        this.searchPlatformMT5.click();
-    }
     get searchPasswordInput(){
         return cy.get(`${tradeAccPasswordInput}`)
-    }
-    EnterTradeAccPassword(password){
-        this.searchPasswordInput.type(`${password}{enter}`);
     }
     get searchTabOpen(){
         return cy.get(`${tab}`).contains("Open Positions")
@@ -85,32 +60,14 @@ class TradeAccPage {
     get searchTabHistoryActive(){
         return cy.get(`${tabActive}`).contains("Trading History")
     }
-    TabOpenClick(){
-        this.searchTabOpen.click();
-    }
-    TabPendingClick(){
-        this.searchTabPending.click();
-    }
-    TabHistoryClick(){
-        this.searchTabHistory.click();
-    }
     get searchTabDemo(){
         return cy.get(`${tabLiveDemo}`).contains("Demo Accounts")
-    }
-    TabDemoClick(){
-        this.searchTabDemo.click();
     }
     get searchButtonSwitch(){
         return cy.get(`${buttonSwitch}`)
     }
-    ButtonSwitchClick(){
-        this.searchButtonSwitch.click();
-    }
     get searchButtonDeposit(){
         return cy.get(`${buttonDeposit}`)
-    }
-    ButtonDepositClick(){
-        this.searchButtonDeposit.click();
     }
     get searchDepositText(){
         return cy.get(`${depositFunds}`).contains("Deposit Funds").should("exist")
@@ -118,14 +75,8 @@ class TradeAccPage {
     get searchButtonSettings(){
         return cy.get(`${accSettings}`)
     }
-    ButtonSettingsClick(){
-        this.searchButtonSettings.click();
-    }
     get searchChangePassword(){
         return cy.get(`${changePassword}`)
-    }
-    ChangePasswordClick(){
-        this.searchChangePassword.click();
     }
     get searchTextChangeYourPassword(){
         return cy.get(`${textChangeYourPassword}`).contains("Change Your Password")
@@ -136,21 +87,11 @@ class TradeAccPage {
     get searchEnterPasswordInput(){
         return cy.get(`${inputEnterPassword}`)
     }
-    newPassword(password1,password2){
-        this.searchNewPasswordInput.type(`${password1}{enter}`);
-        this.searchEnterPasswordInput.type(`${password2}{enter}`);
-    }
     get searchButtonChange(){
         return cy.get(`${buttonChange}`)
     }
-    ButtonChangeClick(){
-        this.searchButtonChange.click();
-    }
     get searchSummField(){
         return cy.get(`${summField}`)
-    }
-    SummField(){
-        this.searchSummField.type(`10000{enter}`);
     }
     get searchSuccess(){
         return cy.get(`${success}`).contains("Your deposit was successful!")
@@ -158,11 +99,70 @@ class TradeAccPage {
     get searchButtonGoToPlatform(){
         return cy.get(`${buttonGoToPlatform}`)
     }
-    ButtonGoToPlatformClick(){
-        this.searchButtonGoToPlatform.click();
-    }
     get searchContainer(){
         return cy.get(`${container}`).should("not.exist")
+    }
+
+    AccountsTabClick(){
+        this.searchAccountsTab.click();
+    }
+    CreateAccButtonClick(){
+        this.searchCreateAccButton.click();
+    }
+    LiveTradeAccClick(){
+        this.searchLiveTradeAcc.click();
+    }
+    DemoTradeAccClick(){
+        this.searchDemoTradeAcc.click();
+    }
+    ChoosePlatformClick(){
+        this.searchChoosePlatform.click();
+    }
+    PlatformMT4Click(){
+        this.searchPlatformMT4.click();
+    }
+    PlatformMT5Click(){
+        this.searchPlatformMT5.click();
+    }
+    EnterTradeAccPassword(password){
+        this.searchPasswordInput.type(`${password}{enter}`);
+    }
+    TabOpenClick(){
+        this.searchTabOpen.click();
+    }
+    TabPendingClick(){
+        this.searchTabPending.click();
+    }
+    TabHistoryClick(){
+        this.searchTabHistory.click();
+    }
+    TabDemoClick(){
+        this.searchTabDemo.click();
+    }
+    ButtonSwitchClick(){
+        this.searchButtonSwitch.click();
+    }
+    ButtonDepositClick(){
+        this.searchButtonDeposit.click();
+    }
+    ButtonSettingsClick(){
+        this.searchButtonSettings.click();
+    }
+    ChangePasswordClick(){
+        this.searchChangePassword.click();
+    }
+    newPassword(password1,password2){
+        this.searchNewPasswordInput.type(`${password1}{enter}`);
+        this.searchEnterPasswordInput.type(`${password2}{enter}`);
+    }
+    ButtonChangeClick(){
+        this.searchButtonChange.click();
+    }
+    SummField(){
+        this.searchSummField.type(`10000{enter}`);
+    }
+    ButtonGoToPlatformClick(){
+        this.searchButtonGoToPlatform.click();
     }
 
 }

@@ -1,6 +1,6 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
-describe('Create Trade Acc', () => {
+describe('Create Trade Accs', () => {
     before(() => {
         cy.fixture('sign_in').then(data => {
             cy.wrap(data).as('loginData')
@@ -20,15 +20,15 @@ describe('Create Trade Acc', () => {
             LoginPage.open();
             cy.wait(1000)
             LoginPage.signInClick();
-            LoginPage.FSAIconClick();
+            LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSA, loginData.password);
-            LoginPage.SearchSideBar();
+            LoginPage.searchSideBar();
             TradeAccPage.AccountsTabClick();
             TradeAccPage.CreateAccButtonClick();
             TradeAccPage.DemoTradeAccClick();
             TradeAccPage.ChoosePlatformClick();
-            TradeAccPage.PlatformMT4Click();
+            TradeAccPage.PlatformMT5Click();
             cy.chooseRandomLeveragesFSA();
             cy.chooseRandomAmountAndCurrency();
             //TradeAccPage.EnterTradeAccPassword();

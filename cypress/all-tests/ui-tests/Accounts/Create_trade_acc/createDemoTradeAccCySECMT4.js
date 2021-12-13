@@ -1,12 +1,12 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
-describe('Create Trade Acc', () => {
-    before(() => {
+describe('Create Trade Accs', () => {
+    beforeEach(() => {
         cy.fixture('sign_in').then(data => {
             cy.wrap(data).as('loginData')
         })
     })
-    before(() => {
+    beforeEach(() => {
         cy.fixture('tradeAccs').then(data => {
             cy.wrap(data).as('tradeAccData')
         })
@@ -15,22 +15,24 @@ describe('Create Trade Acc', () => {
         return false;
     });
 
-    it('Create Live Trade Acc FSA', () => {
+    it('Positive: Login on CySEC with CySEC data', () => {
+        LoginPage.open()
+        cy.wait(1000)
+        LoginPage.signInClick()
+        LoginPage.clickCySECIcon()})
+
+    it('New url', () => {
         cy.get('@loginData').then((loginData) => {
-            LoginPage.open();
-            cy.wait(1000)
-            LoginPage.signInClick();
-            LoginPage.FSAIconClick();
-            LoginPage.openNewUrlFSA();
-            LoginPage.login(loginData.emailFSA, loginData.password);
-            LoginPage.SearchSideBar();
+            LoginPage.openNewUrlCySEC()
+            LoginPage.login(loginData.emailCySEC, loginData.password)
+            LoginPage.searchSideBar()
             TradeAccPage.AccountsTabClick();
             TradeAccPage.CreateAccButtonClick();
-            TradeAccPage.LiveTradeAccClick();
+            TradeAccPage.DemoTradeAccClick();
             TradeAccPage.ChoosePlatformClick();
-            TradeAccPage.PlatformMT5Click();
-            cy.chooseRandomLeveragesFSA();
-            cy.chooseRandomCurrency();
+            TradeAccPage.PlatformMT4Click();
+            cy.chooseRandomLeveragesCySEC();
+            cy.chooseRandomAmountAndCurrency();
             //TradeAccPage.EnterTradeAccPassword();
         })
     })

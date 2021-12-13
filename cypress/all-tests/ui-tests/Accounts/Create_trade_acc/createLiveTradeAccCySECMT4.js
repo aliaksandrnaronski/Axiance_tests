@@ -1,6 +1,6 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
-describe('Create Trade Acc', () => {
+describe('Create Trade Accs', () => {
     beforeEach(() => {
         cy.fixture('sign_in').then(data => {
             cy.wrap(data).as('loginData')
@@ -19,13 +19,13 @@ describe('Create Trade Acc', () => {
         LoginPage.open()
         cy.wait(1000)
         LoginPage.signInClick()
-        LoginPage.CySECIconClick()})
+        LoginPage.clickCySECIcon()})
 
     it('New url', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.openNewUrlCySEC()
             LoginPage.login(loginData.emailCySEC, loginData.password)
-            LoginPage.SearchSideBar()
+            LoginPage.searchSideBar()
             TradeAccPage.AccountsTabClick();
             TradeAccPage.CreateAccButtonClick();
             TradeAccPage.LiveTradeAccClick();

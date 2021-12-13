@@ -1,6 +1,6 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
-describe('Create Trade Acc', () => {
+describe('Open positions/Pending orders/trading', () => {
     before(() => {
         cy.fixture('sign_in').then(data => {
             cy.wrap(data).as('loginData')
@@ -15,23 +15,22 @@ describe('Create Trade Acc', () => {
         return false;
     });
 
-    it('Create Live Trade Acc FSA', () => {
+    it('Open positions/Pending orders/trading', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open();
             cy.wait(1000)
             LoginPage.signInClick();
-            LoginPage.FSAIconClick();
+            LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
-            LoginPage.login(loginData.emailFSA, loginData.password);
-            LoginPage.SearchSideBar();
+            LoginPage.login(loginData.emailFSAforActions, loginData.password);
+            LoginPage.searchSideBar();
             TradeAccPage.AccountsTabClick();
-            TradeAccPage.CreateAccButtonClick();
-            TradeAccPage.DemoTradeAccClick();
-            TradeAccPage.ChoosePlatformClick();
-            TradeAccPage.PlatformMT5Click();
-            cy.chooseRandomLeveragesFSA();
-            cy.chooseRandomAmountAndCurrency();
-            //TradeAccPage.EnterTradeAccPassword();
+            TradeAccPage.TabOpenClick();
+            TradeAccPage.searchTabOpenActive;
+            TradeAccPage.TabPendingClick();
+            TradeAccPage.searchTabPendingActive;
+            TradeAccPage.TabHistoryClick();
+            TradeAccPage.searchTabHistoryActive;
         })
     })
 })

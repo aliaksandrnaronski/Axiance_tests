@@ -6,6 +6,11 @@ describe('Switch to this acc and deposit', () => {
             cy.wrap(data).as('loginData')
         })
     })
+    before(() => {
+        cy.fixture('tradeAccs').then(data => {
+            cy.wrap(data).as('tradeAccData')
+        })
+    })
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
     });
@@ -15,19 +20,17 @@ describe('Switch to this acc and deposit', () => {
             LoginPage.open();
             cy.wait(1000)
             LoginPage.signInClick();
-            LoginPage.FSAIconClick();
+            LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSAforActions, loginData.password);
-            LoginPage.SearchSideBar();
+            LoginPage.searchSideBar();
             TradeAccPage.AccountsTabClick();
             TradeAccPage.TabDemoClick();
-            TradeAccPage.ButtonSwitchClick();
-            TradeAccPage.ButtonDepositClick();
-            TradeAccPage.searchDepositText;
-            TradeAccPage.SummField();
-            TradeAccPage.searchSuccess;
-            TradeAccPage.ButtonGoToPlatformClick();
-            TradeAccPage.searchContainer;
+            TradeAccPage.ButtonSettingsClick();
+            TradeAccPage.ChangePasswordClick();
+            TradeAccPage.searchTextChangeYourPassword;
+            TradeAccPage.newPassword(loginData.new_password, loginData.enter_password);
+            TradeAccPage.ButtonChangeClick();
         })
     })
 })
