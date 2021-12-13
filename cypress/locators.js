@@ -19,7 +19,7 @@ export var leverage= '#leverage'
 export var currency= '#currency'
 export var value= '.css-13vhyk2-option'
 export var tradeAccPasswordInput= '.style_wrapperInput__36oUg'
-//open positions, pending positions, trading histoty and other actions
+//open positions, pending positions, trading history and other actions
 export var tab= '.styles_tabHeader__3Rgp7.styles_tabHeader__3fJiL'
 export var tabActive= '.styles_tabHeader__3Rgp7.styles_tabHeader__3fJiL.styles_activeTabHeader__2UHMA'
 export var tabLiveDemo= '.styles_tabHeader__3Rgp7.styles_tabHeader__18jRo'
