@@ -103,65 +103,65 @@ class TradeAccPage {
         return cy.get(`${container}`).should("not.exist")
     }
 
-    accountsTabClick(){
+    clickAccountsTab(){
         this.searchAccountsTab.click();
     }
-    createAccButtonClick(){
+    clickCreateAccButton(){
         this.searchCreateAccButton.click();
     }
-    liveTradeAccClick(){
+    clickLiveTradeAcc(){
         this.searchLiveTradeAcc.click();
     }
-    demoTradeAccClick(){
+    clickDemoTradeAcc(){
         this.searchDemoTradeAcc.click();
     }
-    choosePlatformClick(){
+    clickChoosePlatform(){
         this.searchChoosePlatform.click();
     }
-    platformMT4Click(){
+    clickPlatformMT4(){
         this.searchPlatformMT4.click();
     }
-    platformMT5Click(){
+    clickPlatformMT5(){
         this.searchPlatformMT5.click();
     }
     enterTradeAccPassword(password){
         this.searchPasswordInput.type(`${password}{enter}`);
     }
-    tabOpenClick(){
+    clickTabOpen(){
         this.searchTabOpen.click();
     }
-    tabPendingClick(){
+    clickTabPending(){
         this.searchTabPending.click();
     }
-    tabHistoryClick(){
+    clickTabHistory(){
         this.searchTabHistory.click();
     }
-    tabDemoClick(){
+    clickTabDemo(){
         this.searchTabDemo.click();
     }
-    buttonSwitchClick(){
+    clickButtonSwitch(){
         this.searchButtonSwitch.click();
     }
-    buttonDepositClick(){
+    clickButtonDeposit(){
         this.searchButtonDeposit.click();
     }
-    buttonSettingsClick(){
+    clickButtonSettings(){
         this.searchButtonSettings.click();
     }
-    changePasswordClick(){
+    clickChangePassword(){
         this.searchChangePassword.click();
     }
-    newPassword(password1,password2){
+    enterNewPassword(password1,password2){
         this.searchNewPasswordInput.type(`${password1}{enter}`);
         this.searchEnterPasswordInput.type(`${password2}{enter}`);
     }
-    buttonChangeClick(){
+    clickButtonChange(){
         this.searchButtonChange.click();
     }
-    summField(){
+    enterSumm(){
         this.searchSummField.type(`10000{enter}`);
     }
-    buttonGoToPlatformClick(){
+    clickButtonGoToPlatform(){
         this.searchButtonGoToPlatform.click();
     }
 

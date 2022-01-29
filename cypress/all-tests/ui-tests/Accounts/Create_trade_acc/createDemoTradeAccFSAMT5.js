@@ -19,16 +19,16 @@ describe('Create Trade Accs', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open();
             //cy.wait(1000)
-            LoginPage.signInClick();
+            LoginPage.clickSignIn();
             LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSA, loginData.password);
             LoginPage.searchSideBar();
-            TradeAccPage.accountsTabClick();
-            TradeAccPage.createAccButtonClick();
-            TradeAccPage.demoTradeAccClick();
-            TradeAccPage.choosePlatformClick();
-            TradeAccPage.platformMT5Click();
+            TradeAccPage.clickAccountsTab();
+            TradeAccPage.clickCreateAccButton();
+            TradeAccPage.clickDemoTradeAcc();
+            TradeAccPage.clickChoosePlatform();
+            TradeAccPage.clickPlatformMT5();
             cy.chooseRandomLeveragesFSA();
             cy.chooseRandomAmountAndCurrency();
             //TradeAccPage.enterTradeAccPassword();

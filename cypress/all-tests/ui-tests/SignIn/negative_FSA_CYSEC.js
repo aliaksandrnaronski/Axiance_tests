@@ -12,7 +12,7 @@ describe('Login', () => {
     it('Negative: Login on FSA with CySEC data', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open()
-            LoginPage.signInClick()
+            LoginPage.clickSignIn()
             LoginPage.clickFSAIcon()
             LoginPage.openNewUrlFSA()
             LoginPage.login(loginData.emailCySEC, loginData.password)

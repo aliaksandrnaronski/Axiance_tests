@@ -11,7 +11,7 @@ describe('Login', () => {
 
     it('Negative: Login on CySEC with wrong CySEC data', () => {
         LoginPage.open()
-        LoginPage.signInClick()
+        LoginPage.clickSignIn()
         LoginPage.clickCySECIcon()
     })
 

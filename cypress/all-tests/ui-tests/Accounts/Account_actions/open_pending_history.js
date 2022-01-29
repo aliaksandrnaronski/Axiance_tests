@@ -19,17 +19,17 @@ describe('Open positions/Pending orders/trading', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open();
             //cy.wait(1000)
-            LoginPage.signInClick();
+            LoginPage.clickSignIn();
             LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSAforActions, loginData.password);
             LoginPage.searchSideBar();
-            TradeAccPage.accountsTabClick();
-            TradeAccPage.tabOpenClick();
+            TradeAccPage.clickAccountsTab();
+            TradeAccPage.clickTabOpen();
             TradeAccPage.searchTabOpenActive;
-            TradeAccPage.tabPendingClick();
+            TradeAccPage.clickTabPending();
             TradeAccPage.searchTabPendingActive;
-            TradeAccPage.tabHistoryClick();
+            TradeAccPage.clickTabHistory();
             TradeAccPage.searchTabHistoryActive;
         })
     })

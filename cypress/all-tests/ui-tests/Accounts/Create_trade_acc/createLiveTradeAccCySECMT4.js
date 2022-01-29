@@ -18,7 +18,7 @@ describe('Create Trade Accs', () => {
     it('Positive: Login on CySEC with CySEC data', () => {
         LoginPage.open()
         //cy.wait(1000)
-        LoginPage.signInClick()
+        LoginPage.clickSignIn()
         LoginPage.clickCySECIcon()})
 
     it('New url', () => {
@@ -26,11 +26,11 @@ describe('Create Trade Accs', () => {
             LoginPage.openNewUrlCySEC()
             LoginPage.login(loginData.emailCySEC, loginData.password)
             LoginPage.searchSideBar()
-            TradeAccPage.accountsTabClick();
-            TradeAccPage.createAccButtonClick();
-            TradeAccPage.liveTradeAccClick();
-            TradeAccPage.choosePlatformClick();
-            TradeAccPage.platformMT4Click();
+            TradeAccPage.clickAccountsTab();
+            TradeAccPage.clickCreateAccButton();
+            TradeAccPage.clickLiveTradeAcc();
+            TradeAccPage.clickChoosePlatform();
+            TradeAccPage.clickPlatformMT4();
             cy.chooseRandomLeveragesCySEC();
             cy.chooseRandomCurrency();
             //TradeAccPage.enterTradeAccPassword();

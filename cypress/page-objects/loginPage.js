@@ -27,7 +27,7 @@ class LoginPage {
     open(){
         cy.visit(`${Cypress.env('axianceURL')}`);
     }
-    signInClick(){
+    clickSignIn(){
         this.searchButtonSignIn.click();
     }
     clickFSAIcon(){

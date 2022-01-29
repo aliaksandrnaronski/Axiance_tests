@@ -11,7 +11,7 @@ describe('Login', () => {
 
 it('Positive: Login on CySEC with CySEC data', () => {
     LoginPage.open()
-    LoginPage.signInClick()
+    LoginPage.clickSignIn()
     LoginPage.clickCySECIcon()})
 
 it('New url', () => {
