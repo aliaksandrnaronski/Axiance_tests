@@ -18,20 +18,20 @@ describe('Create Trade Accs', () => {
     it('Create Live Trade Acc FSA', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open();
-            cy.wait(1000)
+            //cy.wait(1000)
             LoginPage.signInClick();
             LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSA, loginData.password);
             LoginPage.searchSideBar();
-            TradeAccPage.AccountsTabClick();
-            TradeAccPage.CreateAccButtonClick();
-            TradeAccPage.DemoTradeAccClick();
-            TradeAccPage.ChoosePlatformClick();
-            TradeAccPage.PlatformMT4Click();
+            TradeAccPage.accountsTabClick();
+            TradeAccPage.createAccButtonClick();
+            TradeAccPage.demoTradeAccClick();
+            TradeAccPage.choosePlatformClick();
+            TradeAccPage.platformMT4Click();
             cy.chooseRandomLeveragesFSA();
             cy.chooseRandomAmountAndCurrency();
-            //TradeAccPage.EnterTradeAccPassword();
+            //TradeAccPage.enterTradeAccPassword();
         })
     })
 })

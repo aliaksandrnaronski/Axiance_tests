@@ -18,19 +18,19 @@ describe('Switch to this acc and deposit', () => {
     it('Switch to this acc and deposit', () => {
         cy.get('@loginData').then((loginData) => {
             LoginPage.open();
-            cy.wait(1000)
+            //cy.wait(1000)
             LoginPage.signInClick();
             LoginPage.clickFSAIcon();
             LoginPage.openNewUrlFSA();
             LoginPage.login(loginData.emailFSAforActions, loginData.password);
             LoginPage.searchSideBar();
-            TradeAccPage.AccountsTabClick();
-            TradeAccPage.TabDemoClick();
-            TradeAccPage.ButtonSettingsClick();
-            TradeAccPage.ChangePasswordClick();
+            TradeAccPage.accountsTabClick();
+            TradeAccPage.tabDemoClick();
+            TradeAccPage.buttonSettingsClick();
+            TradeAccPage.changePasswordClick();
             TradeAccPage.searchTextChangeYourPassword;
             TradeAccPage.newPassword(loginData.new_password, loginData.enter_password);
-            TradeAccPage.ButtonChangeClick();
+            TradeAccPage.buttonChangeClick();
         })
     })
 })
