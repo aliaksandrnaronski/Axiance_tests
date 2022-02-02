@@ -21,7 +21,7 @@ describe('Switch to this acc and deposit', () => {
             LoginPage.searchSideBar();
             TradeAccPage.clickAccountsTab();
             TradeAccPage.clickTabDemo();
-            TradeAccPage.clickButtonSwitch();
+            //TradeAccPage.clickButtonSwitch();
             TradeAccPage.clickButtonDeposit();
             TradeAccPage.searchDepositText;
             TradeAccPage.enterSumm();
@@ -29,5 +29,6 @@ describe('Switch to this acc and deposit', () => {
             TradeAccPage.clickButtonGoToPlatform();
             TradeAccPage.searchContainer;
         })
+        // todo разбить на два теста checkSwitchingBetweenTradeAccs and checkDepositOnDemoTradeAcc
     })
 })
