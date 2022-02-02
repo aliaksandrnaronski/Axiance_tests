@@ -19,49 +19,49 @@ import {
 
 class TradeAccPage {
     get searchAccountsTab(){
-        return cy.get(`${accountsTab}`).contains("Accounts")
+        return cy.get(`${accountsTab}`)
     }
     get searchCreateAccButton(){
-        return cy.get(`${createAccButton}`).contains("+ CREATE NEW ACCOUNT")
+        return cy.get(`${createAccButton}`)
     }
     get searchLiveTradeAcc(){
-        return cy.get(`${typeTradeAcc}`).contains("Live Account")
+        return cy.get(`${typeTradeAcc}`)
     }
     get searchDemoTradeAcc(){
-        return cy.get(`${typeTradeAcc}`).contains("Demo Account")
+        return cy.get(`${typeTradeAcc}`)
     }
     get searchChoosePlatform(){
         return cy.get(`${platformType}`)
     }
     get searchPlatformMT4(){
-        return cy.get(`${value}`).contains("MT4")
+        return cy.get(`${value}`)
     }
     get searchPlatformMT5(){
-        return cy.get(`${value}`).contains("MT5")
+        return cy.get(`${value}`)
     }
     get searchPasswordInput(){
         return cy.get(`${tradeAccPasswordInput}`)
     }
     get searchTabOpen(){
-        return cy.get(`${tab}`).contains("Open Positions")
+        return cy.get(`${tab}`)
     }
     get searchTabPending(){
-        return cy.get(`${tab}`).contains("Pending Orders")
+        return cy.get(`${tab}`)
     }
     get searchTabHistory(){
-        return cy.get(`${tab}`).contains("Trading History")
+        return cy.get(`${tab}`)
     }
     get searchTabOpenActive(){
-        return cy.get(`${tabActive}`).contains("Open Positions")
+        return cy.get(`${tabActive}`)
     }
     get searchTabPendingActive(){
-        return cy.get(`${tabActive}`).contains("Pending Orders")
+        return cy.get(`${tabActive}`)
     }
     get searchTabHistoryActive(){
-        return cy.get(`${tabActive}`).contains("Trading History")
+        return cy.get(`${tabActive}`)
     }
     get searchTabDemo(){
-        return cy.get(`${tabLiveDemo}`).contains("Demo Accounts")
+        return cy.get(`${tabLiveDemo}`)
     }
     get searchButtonSwitch(){
         return cy.get(`${buttonSwitch}`)
@@ -70,7 +70,7 @@ class TradeAccPage {
         return cy.get(`${buttonDeposit}`)
     }
     get searchDepositText(){
-        return cy.get(`${depositFunds}`).contains("Deposit Funds").should("exist")
+        return cy.get(`${depositFunds}`)
     }
     get searchButtonSettings(){
         return cy.get(`${accSettings}`)
@@ -79,7 +79,7 @@ class TradeAccPage {
         return cy.get(`${changePassword}`)
     }
     get searchTextChangeYourPassword(){
-        return cy.get(`${textChangeYourPassword}`).contains("Change Your Password")
+        return cy.get(`${textChangeYourPassword}`)
     }
     get searchNewPasswordInput(){
         return cy.get(`${inputPassword}`)
@@ -94,50 +94,50 @@ class TradeAccPage {
         return cy.get(`${summField}`)
     }
     get searchSuccess(){
-        return cy.get(`${success}`).contains("Your deposit was successful!")
+        return cy.get(`${success}`)
     }
     get searchButtonGoToPlatform(){
         return cy.get(`${buttonGoToPlatform}`)
     }
     get searchContainer(){
-        return cy.get(`${container}`).should("not.exist")
+        return cy.get(`${container}`)
     }
 
     clickAccountsTab(){
-        this.searchAccountsTab.click();
+        this.searchAccountsTab.contains("Accounts").click();
     }
     clickCreateAccButton(){
-        this.searchCreateAccButton.click();
+        this.searchCreateAccButton.contains("+ CREATE NEW ACCOUNT").click();
     }
     clickLiveTradeAcc(){
-        this.searchLiveTradeAcc.click();
+        this.searchLiveTradeAcc.contains("Live Account").click();
     }
     clickDemoTradeAcc(){
-        this.searchDemoTradeAcc.click();
+        this.searchDemoTradeAcc.contains("Demo Account").click();
     }
     clickChoosePlatform(){
         this.searchChoosePlatform.click();
     }
     clickPlatformMT4(){
-        this.searchPlatformMT4.click();
+        this.searchPlatformMT4.contains("MT4").click();
     }
     clickPlatformMT5(){
-        this.searchPlatformMT5.click();
+        this.searchPlatformMT5.contains("MT5").click();
     }
     enterTradeAccPassword(password){
         this.searchPasswordInput.type(`${password}{enter}`);
     }
     clickTabOpen(){
-        this.searchTabOpen.click();
+        this.searchTabOpen.contains("Open Positions").click();
     }
     clickTabPending(){
-        this.searchTabPending.click();
+        this.searchTabPending.contains("Pending Orders").click();
     }
     clickTabHistory(){
-        this.searchTabHistory.click();
+        this.searchTabHistory.contains("Trading History").click();
     }
     clickTabDemo(){
-        this.searchTabDemo.click();
+        this.searchTabDemo.contains("Demo Accounts").click();
     }
     clickButtonSwitch(){
         this.searchButtonSwitch.click();

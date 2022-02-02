@@ -23,12 +23,11 @@ describe('Switch to this acc and deposit', () => {
             TradeAccPage.clickTabDemo();
             //TradeAccPage.clickButtonSwitch();
             TradeAccPage.clickButtonDeposit();
-            TradeAccPage.searchDepositText;
+            TradeAccPage.searchDepositText.contains("Deposit Funds").should("exist");
             TradeAccPage.enterSumm();
-            TradeAccPage.searchSuccess;
+            TradeAccPage.searchSuccess.contains("Your deposit was successful!");
             TradeAccPage.clickButtonGoToPlatform();
-            TradeAccPage.searchContainer;
+            TradeAccPage.searchContainer.should("not.exist");
         })
-        // todo разбить на два теста checkSwitchingBetweenTradeAccs and checkDepositOnDemoTradeAcc
     })
 })

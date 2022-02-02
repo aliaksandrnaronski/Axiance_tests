@@ -26,11 +26,11 @@ describe('Open positions/Pending orders/trading', () => {
             LoginPage.searchSideBar();
             TradeAccPage.clickAccountsTab();
             TradeAccPage.clickTabOpen();
-            TradeAccPage.searchTabOpenActive;
+            TradeAccPage.searchTabOpenActive.contains("Open Positions");
             TradeAccPage.clickTabPending();
-            TradeAccPage.searchTabPendingActive;
+            TradeAccPage.searchTabPendingActive.contains("Pending Orders");
             TradeAccPage.clickTabHistory();
-            TradeAccPage.searchTabHistoryActive;
+            TradeAccPage.searchTabHistoryActive.contains("Trading History");
         })
     })
 })

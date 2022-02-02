@@ -28,7 +28,7 @@ describe('Switch to this acc and deposit', () => {
             TradeAccPage.clickTabDemo();
             TradeAccPage.clickButtonSettings();
             TradeAccPage.clickChangePassword();
-            TradeAccPage.searchTextChangeYourPassword;
+            TradeAccPage.searchTextChangeYourPassword.contains("Change Your Password");
             TradeAccPage.enterNewPassword(loginData.new_password, loginData.enter_password);
             TradeAccPage.clickButtonChange();
         })

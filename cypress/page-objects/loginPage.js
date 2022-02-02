@@ -9,13 +9,13 @@ import {
 
 class LoginPage {
     get searchButtonSignIn(){
-        return cy.get(`${buttonSignIn}`).contains("Sign In").should("be.visible")
+        return cy.get(`${buttonSignIn}`)
     }
     get searchFSAIcon(){
-        return cy.get(`${fsaIcon}`).should("be.visible")
+        return cy.get(`${fsaIcon}`)
     }
     get searchCySECIcon(){
-        return cy.get(`${cysecIcon}`).should("be.visible")
+        return cy.get(`${cysecIcon}`)
     }
     get searchEmailInput(){
         return cy.get(`${inputEmail}`)
@@ -28,13 +28,13 @@ class LoginPage {
         cy.visit(`${Cypress.env('axianceURL')}`);
     }
     clickSignIn(){
-        this.searchButtonSignIn.click();
+        this.searchButtonSignIn.contains("Sign In").should("be.visible").click();
     }
     clickFSAIcon(){
-        this.searchFSAIcon.click();
+        this.searchFSAIcon.should("be.visible").click();
     }
     clickCySECIcon(){
-        this.searchCySECIcon.click();
+        this.searchCySECIcon.should("be.visible").click();
     }
     openNewUrlFSA(){
         cy.visit(`${newUrlFSA}`, {failOnStatusCode: false})
