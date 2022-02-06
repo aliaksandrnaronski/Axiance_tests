@@ -40,9 +40,11 @@ describe('Create Trade Accs', () => {
             cy.log('AND Choose MT4 platform')
             TradeAccPage.clickPlatformMT4();
             cy.log('AND Choose random leverage')
-            cy.chooseRandomLeveragesCySEC();
+            TradeAccPage.pickRandomLeverageFSA()
+            //cy.chooseRandomLeveragesFSA();
             cy.log('AND Choose random amount and currency')
-            cy.chooseRandomAmountAndCurrency();
+            TradeAccPage.pickRandomAmountAndCurrency()
+            //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
             //TradeAccPage.enterTradeAccPassword();
         })

@@ -1,10 +1,10 @@
 import {
     accountsTab,
-    accSettings, buttonChange,
+    accSettings, amount, buttonChange,
     buttonDeposit, buttonGoToPlatform,
     buttonSwitch,
     changePassword, container,
-    createAccButton,
+    createAccButton, currency,
     depositFunds, inputEnterPassword,
     inputPassword, leverage,
     platformType, success, summField,
@@ -16,6 +16,8 @@ import {
     typeTradeAcc,
     value
 } from "../locators";
+
+import tradeAccData from '../fixtures/tradeAccs.json'
 
 class TradeAccPage {
     get searchAccountsTab(){
@@ -163,6 +165,39 @@ class TradeAccPage {
     }
     clickButtonGoToPlatform(){
         this.searchButtonGoToPlatform.click();
+    }
+    pickRandomLeverageFSA(){
+        let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
+        cy.get(`${leverage}`).click()
+        cy.get(`${value}`).contains(randomLeverageFSA).click()
+    }
+    pickRandomLeverageCYSEC(){
+        let randomLeverageCySEC = chance.pickone(tradeAccData.leveragesCySEC).leverage
+        cy.get(`${leverage}`).click()
+        cy.get(`${value}`).contains(randomLeverageCySEC).click()
+    }
+    pickRandomLeverageProfCYSEC(){
+        let randomLeverageProfCySEC = chance.pickone(tradeAccData.leveragesProfCySEC).leverage
+        cy.get(`${leverage}`).click()
+        cy.get(`${value}`).contains(randomLeverageProfCySEC).click()
+    }
+    pickRandomCurrency(){
+        let randomCurrency = chance.pickone(tradeAccData.currency).shortName
+        cy.get(`${currency}`).click()
+        cy.get(`${value}`).contains(randomCurrency).click()
+    }
+    pickRandomAmount(){
+        let randomAmount = chance.pickone(tradeAccData.amounts).amount
+        cy.get(`${amount}`).click()
+        cy.get(`${value}`).contains(randomAmount).click()
+    }
+    pickRandomAmountAndCurrency(){
+        let randomAmount = chance.pickone(tradeAccData.amounts).amount
+        let randomCurrency = chance.pickone(tradeAccData.currency).shortName
+        cy.get(`${currency}`).click()
+        cy.get(`${value}`).contains(randomCurrency).click()
+        cy.get(`${amount}`).click()
+        cy.get(`${value}`).contains(randomAmount+" "+randomCurrency).click()
     }
 
 }
