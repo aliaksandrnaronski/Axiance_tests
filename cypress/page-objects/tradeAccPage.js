@@ -6,7 +6,7 @@ import {
     changePassword, container,
     createAccButton,
     depositFunds, inputEnterPassword,
-    inputPassword,
+    inputPassword, leverage,
     platformType, success, summField,
     tab,
     tabActive,
