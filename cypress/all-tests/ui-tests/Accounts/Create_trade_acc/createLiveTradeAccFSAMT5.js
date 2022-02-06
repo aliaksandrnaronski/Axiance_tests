@@ -1,5 +1,6 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
+import tradeAccData from "../../../../fixtures/tradeAccs.json";
 describe('Create Trade Accs', () => {
     before(() => {
         cy.fixture('sign_in').then(data => {
@@ -40,10 +41,12 @@ describe('Create Trade Accs', () => {
             cy.log('AND Choose MT5 platform')
             TradeAccPage.clickPlatformMT5();
             cy.log('AND Choose random leverage')
-            TradeAccPage.pickRandomLeverageFSA()
+            let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
+            TradeAccPage.pickRandomLeverageFSA(randomLeverageFSA)
             //cy.chooseRandomLeveragesFSA();
-            cy.log('AND Choose random amount and currency')
-            TradeAccPage.pickRandomCurrency()
+            cy.log('AND Choose random currency')
+            let randomCurrency = chance.pickone(tradeAccData.currency).shortName
+            TradeAccPage.pickRandomCurrency(randomCurrency)
             //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
             //TradeAccPage.enterTradeAccPassword();

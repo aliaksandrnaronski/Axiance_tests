@@ -166,34 +166,25 @@ class TradeAccPage {
     clickButtonGoToPlatform(){
         this.searchButtonGoToPlatform.click();
     }
-    pickRandomLeverageFSA(){
-        let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
+    pickRandomLeverageFSA(randomLeverageFSA){
+        //let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
         cy.get(`${leverage}`).click()
         cy.get(`${value}`).contains(randomLeverageFSA).click()
     }
-    pickRandomLeverageCYSEC(){
-        let randomLeverageCySEC = chance.pickone(tradeAccData.leveragesCySEC).leverage
+    pickRandomLeverageCYSEC(randomLeverageCySEC){
         cy.get(`${leverage}`).click()
         cy.get(`${value}`).contains(randomLeverageCySEC).click()
     }
-    pickRandomLeverageProfCYSEC(){
-        let randomLeverageProfCySEC = chance.pickone(tradeAccData.leveragesProfCySEC).leverage
+    pickRandomLeverageProfCYSEC(randomLeverageProfCySEC){
+        //let randomLeverageProfCySEC = chance.pickone(tradeAccData.leveragesProfCySEC).leverage
         cy.get(`${leverage}`).click()
         cy.get(`${value}`).contains(randomLeverageProfCySEC).click()
     }
-    pickRandomCurrency(){
-        let randomCurrency = chance.pickone(tradeAccData.currency).shortName
+    pickRandomCurrency(randomCurrency){
         cy.get(`${currency}`).click()
         cy.get(`${value}`).contains(randomCurrency).click()
     }
-    pickRandomAmount(){
-        let randomAmount = chance.pickone(tradeAccData.amounts).amount
-        cy.get(`${amount}`).click()
-        cy.get(`${value}`).contains(randomAmount).click()
-    }
-    pickRandomAmountAndCurrency(){
-        let randomAmount = chance.pickone(tradeAccData.amounts).amount
-        let randomCurrency = chance.pickone(tradeAccData.currency).shortName
+    pickRandomAmountAndCurrency(randomAmount, randomCurrency){
         cy.get(`${currency}`).click()
         cy.get(`${value}`).contains(randomCurrency).click()
         cy.get(`${amount}`).click()
