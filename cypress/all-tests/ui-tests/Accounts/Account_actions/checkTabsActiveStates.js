@@ -17,19 +17,31 @@ describe('Open positions/Pending orders/trading', () => {
 
     it('Open positions/Pending orders/trading', () => {
         cy.get('@loginData').then((loginData) => {
-            LoginPage.open();
-            //cy.wait(1000)
-            LoginPage.clickSignIn();
-            LoginPage.clickFSAIcon();
-            LoginPage.openNewUrlFSA();
-            LoginPage.login(loginData.emailFSAforActions, loginData.password);
-            LoginPage.searchSideBar();
+            cy.log('WHEN User goes to the Login page')
+            LoginPage.open()
+            cy.log('AND Clicks sign in button')
+            LoginPage.clickSignIn()
+            cy.log('AND Clicks FSA button')
+            LoginPage.clickFSAIcon()
+            cy.log('THEN User goes to the FSA Login page')
+            LoginPage.openNewUrlFSA()
+            cy.log('AND Enter email FSA and password(valid data)')
+            LoginPage.login(loginData.emailFSA, loginData.password)
+            cy.log('THEN Check that the user has logged in')
+            LoginPage.searchSideBar()
+            cy.log('AND Click accounts tab')
             TradeAccPage.clickAccountsTab();
+            cy.log('AND Click open tab')
             TradeAccPage.clickTabOpen();
+            cy.log('THEN Search active open tab')
             TradeAccPage.searchTabOpenActive.contains("Open Positions");
+            cy.log('AND Click pending tab')
             TradeAccPage.clickTabPending();
+            cy.log('THEN Search active pending tab')
             TradeAccPage.searchTabPendingActive.contains("Pending Orders");
+            cy.log('AND Click history tab')
             TradeAccPage.clickTabHistory();
+            cy.log('THEN Search active history tab')
             TradeAccPage.searchTabHistoryActive.contains("Trading History");
         })
     })
