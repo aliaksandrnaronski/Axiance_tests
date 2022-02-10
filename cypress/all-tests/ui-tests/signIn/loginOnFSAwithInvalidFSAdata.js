@@ -22,7 +22,7 @@ describe('Login', () => {
             cy.log('AND Enter email FSA and password(invalid data)')
             LoginPage.login(loginData.wrongemailFSA, loginData.password)
             cy.log('THEN Check that the user has not logged in')
-            LoginPage.checkExistenceOfErrorMessage()
+            LoginPage.checkErrorMessageExist()
         })
     })
 })

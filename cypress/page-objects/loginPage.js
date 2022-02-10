@@ -1,12 +1,3 @@
-import {
-    buttonSignIn,
-    cysecIcon,
-    fsaIcon, input, inputEmail, inputPassword, loginData,
-    newUrlCySEC,
-    newUrlFSA,
-    sideBar
-} from "../locators";
-
 class LoginPage {
     get searchButtonSignIn(){
         return cy.get('.css-1m5rymt.e1w14daj6')
@@ -49,8 +40,7 @@ class LoginPage {
     checkSideBarExist(){
         return cy.get('.styles_sidebar__8-r_L').should("be.visible")
     }
-    //todo переименовать enterWrongLoginData
-    checkExistenceOfErrorMessage(){
+    checkErrorMessageExist(){
         return cy.get('.style_default__1exWx.style_s12__2GuCl').should("be.visible")
     }
 }

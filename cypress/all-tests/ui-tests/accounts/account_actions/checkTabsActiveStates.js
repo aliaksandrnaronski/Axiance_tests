@@ -34,15 +34,15 @@ describe('Open positions/Pending orders/trading', () => {
             cy.log('AND Click open tab')
             TradeAccPage.clickTabOpen();
             cy.log('THEN Search active open tab')
-            TradeAccPage.searchTabOpenActive.contains("Open Positions");
+            TradeAccPage.searchActiveTab.contains("Open Positions");
             cy.log('AND Click pending tab')
             TradeAccPage.clickTabPending();
             cy.log('THEN Search active pending tab')
-            TradeAccPage.searchTabPendingActive.contains("Pending Orders");
+            TradeAccPage.searchActiveTab.contains("Pending Orders");
             cy.log('AND Click history tab')
             TradeAccPage.clickTabHistory();
             cy.log('THEN Search active history tab')
-            TradeAccPage.searchTabHistoryActive.contains("Trading History");
+            TradeAccPage.searchActiveTab.contains("Trading History");
         })
     })
 })

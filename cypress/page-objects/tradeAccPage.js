@@ -1,148 +1,110 @@
-import {
-    accountsTab,
-    accSettings, amount, buttonChange,
-    buttonDeposit, buttonGoToPlatform,
-    buttonSwitch,
-    changePassword, container,
-    createAccButton, currency,
-    depositFunds, inputEnterPassword,
-    inputPassword, leverage,
-    platformType, success, summField,
-    tab,
-    tabActive,
-    tabLiveDemo,
-    textChangeYourPassword,
-    tradeAccPasswordInput,
-    typeTradeAcc,
-    value
-} from "../locators";
-
-import tradeAccData from '../fixtures/tradeAccs.json'
-
 class TradeAccPage {
     get searchAccountsTab(){
-        return cy.get(`${accountsTab}`)
+        return cy.get('.styles_itemText__2niJC')
     }
     get searchCreateAccButton(){
-        return cy.get(`${createAccButton}`)
+        return cy.get('.style_button__1T3Pb.styles_button__3c_TI')
     }
-    get searchLiveTradeAcc(){
-        return cy.get(`${typeTradeAcc}`)
-    }
-    get searchDemoTradeAcc(){
-        return cy.get(`${typeTradeAcc}`)
+    get searchTypeTradeAcc(){
+        return cy.get('.style_checkboxText__GvthB')
     }
     get searchChoosePlatform(){
-        return cy.get(`${platformType}`)
+        return cy.get('#platformType')
     }
-    get searchPlatformMT4(){
-        return cy.get(`${value}`)
-    }
-    get searchPlatformMT5(){
-        return cy.get(`${value}`)
+    get searchPlatform(){
+        return cy.get('.css-13vhyk2-option')
     }
     get searchPasswordInput(){
-        return cy.get(`${tradeAccPasswordInput}`)
+        return cy.get('.style_wrapperInput__36oUg')
     }
-    get searchTabOpen(){
-        return cy.get(`${tab}`)
+    get searchTab(){
+        return cy.get('.styles_tabHeader__3Rgp7.styles_tabHeader__3fJiL')
     }
-    get searchTabPending(){
-        return cy.get(`${tab}`)
-    }
-    get searchTabHistory(){
-        return cy.get(`${tab}`)
-    }
-    get searchTabOpenActive(){
-        return cy.get(`${tabActive}`)
-    }
-    get searchTabPendingActive(){
-        return cy.get(`${tabActive}`)
-    }
-    get searchTabHistoryActive(){
-        return cy.get(`${tabActive}`)
+    get searchActiveTab(){
+        return cy.get('.styles_tabHeader__3Rgp7.styles_tabHeader__3fJiL.styles_activeTabHeader__2UHMA')
     }
     get searchTabDemo(){
-        return cy.get(`${tabLiveDemo}`)
+        return cy.get('.styles_tabHeader__3Rgp7.styles_tabHeader__18jRo')
     }
     get searchButtonSwitch(){
-        return cy.get(`${buttonSwitch}`)
+        return cy.get('.style_button__1T3Pb.styles_switchButton__3wyvY')
     }
     get searchButtonDeposit(){
-        return cy.get(`${buttonDeposit}`)
+        return cy.get('.style_button__1T3Pb.styles_singleDepositButton__8VDwo')
     }
     get searchDepositText(){
-        return cy.get(`${depositFunds}`)
+        return cy.get('.style_default__1exWx.style_s20__38iJt')
     }
     get searchButtonSettings(){
-        return cy.get(`${accSettings}`)
+        return cy.get('.styles_settingIcon__2__kK')
     }
     get searchChangePassword(){
-        return cy.get(`${changePassword}`)
+        return cy.get('.styles_popOverButton__2It43')
     }
     get searchTextChangeYourPassword(){
-        return cy.get(`${textChangeYourPassword}`)
+        return cy.get('.style_default__1exWx.style_wb__2z8Ro.style_s20__38iJt')
     }
     get searchNewPasswordInput(){
-        return cy.get(`${inputPassword}`)
+        return cy.get('#password')
     }
-    get searchEnterPasswordInput(){
-        return cy.get(`${inputEnterPassword}`)
+    get searchRepeatPasswordInput(){
+        return cy.get('#repeatedPassword')
     }
     get searchButtonChange(){
-        return cy.get(`${buttonChange}`)
+        return cy.get('.style_button__1T3Pb.styles_submitButton__3yTMy')
     }
     get searchSummField(){
-        return cy.get(`${summField}`)
+        return cy.get('#summ')
     }
     get searchSuccess(){
-        return cy.get(`${success}`)
+        return cy.get('.styles_popUpContentTitle__1rcnr')
     }
     get searchButtonGoToPlatform(){
-        return cy.get(`${buttonGoToPlatform}`)
+        return cy.get('.style_button__1T3Pb.styles_popUpContentButton__gjZCm')
     }
     get searchContainer(){
-        return cy.get(`${container}`)
+        return cy.get('.styles_container__1O3h2')
     }
+    amount= '#amount'
+    leverage= '#leverage'
+    currency= '#currency'
+    value= '.css-13vhyk2-option'
 
     clickAccountsTab(){
-        this.searchAccountsTab.contains("accounts").click();
+        this.searchAccountsTab.contains("Accounts").click();
     }
     clickCreateAccButton(){
         this.searchCreateAccButton.contains("+ CREATE NEW ACCOUNT").click();
     }
     clickLiveTradeAcc(){
-        this.searchLiveTradeAcc.contains("Live Account").click();
+        this.searchTypeTradeAcc.contains("Live Account").click();
     }
     clickDemoTradeAcc(){
-        this.searchDemoTradeAcc.contains("Demo Account").click();
+        this.searchTypeTradeAcc.contains("Demo Account").click();
     }
     clickChoosePlatform(){
         this.searchChoosePlatform.click();
     }
     clickPlatformMT4(){
-        this.searchPlatformMT4.contains("MT4").click();
+        this.searchPlatform.contains("MT4").click();
     }
     clickPlatformMT5(){
-        this.searchPlatformMT5.contains("MT5").click();
+        this.searchPlatform.contains("MT5").click();
     }
     enterTradeAccPassword(password){
         this.searchPasswordInput.type(`${password}{enter}`);
     }
     clickTabOpen(){
-        this.searchTabOpen.contains("Open Positions").click();
+        this.searchTab.contains("Open Positions").click();
     }
     clickTabPending(){
-        this.searchTabPending.contains("Pending Orders").click();
+        this.searchTab.contains("Pending Orders").click();
     }
     clickTabHistory(){
-        this.searchTabHistory.contains("Trading History").click();
+        this.searchTab.contains("Trading History").click();
     }
     clickTabDemo(){
         this.searchTabDemo.contains("Demo accounts").click();
-    }
-    clickButtonSwitch(){
-        this.searchButtonSwitch.click();
     }
     clickButtonDeposit(){
         this.searchButtonDeposit.click();
@@ -155,7 +117,7 @@ class TradeAccPage {
     }
     enterNewPassword(password1,password2){
         this.searchNewPasswordInput.type(`${password1}{enter}`);
-        this.searchEnterPasswordInput.type(`${password2}{enter}`);
+        this.searchRepeatPasswordInput.type(`${password2}{enter}`);
     }
     clickButtonChange(){
         this.searchButtonChange.click();
@@ -168,27 +130,27 @@ class TradeAccPage {
     }
     pickRandomLeverageFSA(randomLeverageFSA){
         //let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
-        cy.get(`${leverage}`).click()
-        cy.get(`${value}`).contains(randomLeverageFSA).click()
+        cy.get(`${(this.leverage)}`).click()
+        cy.get(`${(this.value)}`).contains(randomLeverageFSA).click()
     }
     pickRandomLeverageCYSEC(randomLeverageCySEC){
-        cy.get(`${leverage}`).click()
-        cy.get(`${value}`).contains(randomLeverageCySEC).click()
+        cy.get(`${(this.leverage)}`).click()
+        cy.get(`${(this.value)}`).contains(randomLeverageCySEC).click()
     }
-    pickRandomLeverageProfCYSEC(randomLeverageProfCySEC){
+    /*pickRandomLeverageProfCYSEC(randomLeverageProfCySEC){
         //let randomLeverageProfCySEC = chance.pickone(tradeAccData.leveragesProfCySEC).leverage
-        cy.get(`${leverage}`).click()
-        cy.get(`${value}`).contains(randomLeverageProfCySEC).click()
-    }
+        cy.get(`${(this.leverage)}`).click()
+        cy.get(`${(this.value)}`).contains(randomLeverageProfCySEC).click()
+    }*/
     pickRandomCurrency(randomCurrency){
-        cy.get(`${currency}`).click()
-        cy.get(`${value}`).contains(randomCurrency).click()
+        cy.get(`${(this.currency)}`).click()
+        cy.get(`${(this.value)}`).contains(randomCurrency).click()
     }
     pickRandomAmountAndCurrency(randomAmount, randomCurrency){
-        cy.get(`${currency}`).click()
-        cy.get(`${value}`).contains(randomCurrency).click()
-        cy.get(`${amount}`).click()
-        cy.get(`${value}`).contains(randomAmount+" "+randomCurrency).click()
+        cy.get(`${(this.currency)}`).click()
+        cy.get(`${(this.value)}`).contains(randomCurrency).click()
+        cy.get(`${(this.amount)}`).click()
+        cy.get(`${(this.value)}`).contains(randomAmount+" "+randomCurrency).click()
     }
 
 }

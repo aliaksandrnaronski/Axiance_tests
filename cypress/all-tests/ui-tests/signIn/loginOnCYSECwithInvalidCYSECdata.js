@@ -25,7 +25,7 @@ describe('Login', () => {
             cy.log('AND Enter email CYSEC and password(invalid data)')
             LoginPage.login(loginData.wrongemailCySEC, loginData.password)
             cy.log('THEN Check that the user has not logged in')
-            LoginPage.checkExistenceOfErrorMessage()
+            LoginPage.checkErrorMessageExist()
         })
     })
 })

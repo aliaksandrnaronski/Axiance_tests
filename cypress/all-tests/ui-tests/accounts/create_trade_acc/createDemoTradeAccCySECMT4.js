@@ -1,6 +1,8 @@
 import LoginPage from "../../../../page-objects/loginPage";
 import TradeAccPage from "../../../../page-objects/tradeAccPage";
 import tradeAccData from "../../../../fixtures/tradeAccs.json";
+import Chance from 'chance';
+
 describe('Create Trade Accs', () => {
     beforeEach(() => {
         cy.fixture('sign_in').then(data => {
