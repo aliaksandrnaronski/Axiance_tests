@@ -6,11 +6,6 @@ describe('Switch to this acc and deposit', () => {
             cy.wrap(data).as('loginData')
         })
     })
-    before(() => {
-        cy.fixture('tradeAccs').then(data => {
-            cy.wrap(data).as('tradeAccData')
-        })
-    })
     Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
     });
@@ -28,21 +23,24 @@ describe('Switch to this acc and deposit', () => {
             cy.log('AND Enter email FSA and password(valid data)')
             LoginPage.login(loginData.emailFSA, loginData.password)
             cy.log('THEN Check that the user has logged in')
-            LoginPage.searchSideBar()
+            LoginPage.checkSideBarExist()
             cy.log('AND Click accounts tab')
             TradeAccPage.clickAccountsTab();
             cy.log('AND Click demo tab')
             TradeAccPage.clickTabDemo();
-            cy.log('AND Click button settings for TA')
-            TradeAccPage.clickButtonSettings();
-            cy.log('AND Click Change password')
-            TradeAccPage.clickChangePassword();
-            cy.log('AND Search field for new password')
-            TradeAccPage.searchTextChangeYourPassword.contains("Change Your Password");
-            cy.log('AND Enter new password')
-            TradeAccPage.enterNewPassword(loginData.new_password, loginData.enter_password);
-            cy.log('AND Click button Change password')
-            TradeAccPage.clickButtonChange();
+            //TradeAccPage.clickButtonSwitch();
+            cy.log('AND Click deposit button')
+            TradeAccPage.clickButtonDeposit();
+            cy.log('AND Find field for summ')
+            TradeAccPage.searchDepositText.contains("Deposit Funds").should("exist");
+            cy.log('AND Enter deposit summ')
+            TradeAccPage.enterSumm();
+            cy.log('THEN Check that deposit was successful')
+            TradeAccPage.searchSuccess.contains("Your deposit was successful!");
+            cy.log('AND Click button "Go to platform"')
+            TradeAccPage.clickButtonGoToPlatform();
+            cy.log('THEN Check that we are back on the dashboard')
+            TradeAccPage.searchContainer.should("not.exist");
         })
     })
 })

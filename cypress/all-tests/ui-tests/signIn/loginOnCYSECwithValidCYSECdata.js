@@ -24,7 +24,7 @@ it('New url', () => {
         cy.log('AND Enter email CYSEC and password(valid data)')
         LoginPage.login(loginData.emailCySEC, loginData.password)
         cy.log('THEN Check that the user has logged in')
-        LoginPage.searchSideBar()
+        LoginPage.checkSideBarExist()
     })
 })
 })

@@ -46,9 +46,10 @@ class LoginPage {
         this.searchEmailInput.type(`${email}{enter}`);
         this.searchPasswordInput.type(`${password}{enter}`);
     }
-    searchSideBar(){
+    checkSideBarExist(){
         return cy.get(`${sideBar}`).should("be.visible").should('exist')
     }
+    //todo переименовать enterWrongLoginData
     enterWrongLoginData(){
         return cy.get(`${loginData}`).should("be.visible").should('exist')
     }

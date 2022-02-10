@@ -106,7 +106,7 @@ class TradeAccPage {
     }
 
     clickAccountsTab(){
-        this.searchAccountsTab.contains("Accounts").click();
+        this.searchAccountsTab.contains("accounts").click();
     }
     clickCreateAccButton(){
         this.searchCreateAccButton.contains("+ CREATE NEW ACCOUNT").click();
@@ -139,7 +139,7 @@ class TradeAccPage {
         this.searchTabHistory.contains("Trading History").click();
     }
     clickTabDemo(){
-        this.searchTabDemo.contains("Demo Accounts").click();
+        this.searchTabDemo.contains("Demo accounts").click();
     }
     clickButtonSwitch(){
         this.searchButtonSwitch.click();

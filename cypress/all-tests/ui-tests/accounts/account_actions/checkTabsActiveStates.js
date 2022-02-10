@@ -28,7 +28,7 @@ describe('Open positions/Pending orders/trading', () => {
             cy.log('AND Enter email FSA and password(valid data)')
             LoginPage.login(loginData.emailFSA, loginData.password)
             cy.log('THEN Check that the user has logged in')
-            LoginPage.searchSideBar()
+            LoginPage.checkSideBarExist()
             cy.log('AND Click accounts tab')
             TradeAccPage.clickAccountsTab();
             cy.log('AND Click open tab')

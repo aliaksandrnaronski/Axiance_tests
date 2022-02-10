@@ -31,13 +31,13 @@ describe('Create Trade Accs', () => {
             cy.log('AND Enter email CYSEC and password(valid data)')
             LoginPage.login(loginData.emailCySEC, loginData.password)
             cy.log('THEN Check that the user has logged in')
-            LoginPage.searchSideBar()
+            LoginPage.checkSideBarExist()
             cy.log('AND Click accounts tab')
             TradeAccPage.clickAccountsTab();
             cy.log('AND Click button "Create trade acc"')
             TradeAccPage.clickCreateAccButton();
             cy.log('AND Click demo tab')
-            TradeAccPage.clickDemoTradeAcc();
+            TradeAccPage.clickLiveTradeAcc();
             cy.log('AND Click on platform dropdown')
             TradeAccPage.clickChoosePlatform();
             cy.log('AND Choose MT4 platform')
@@ -47,9 +47,8 @@ describe('Create Trade Accs', () => {
             TradeAccPage.pickRandomLeverageCYSEC(randomLeverageCySEC)
             //cy.chooseRandomLeveragesCySEC();
             cy.log('AND Choose random amount and currency')
-            let randomAmount = chance.pickone(tradeAccData.amounts).amount
             let randomCurrency = chance.pickone(tradeAccData.currency).shortName
-            TradeAccPage.pickRandomAmountAndCurrency(randomAmount, randomCurrency)
+            TradeAccPage.pickRandomCurrency(randomCurrency)
             //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
             //TradeAccPage.enterTradeAccPassword();
