@@ -53,7 +53,6 @@ describe('Create Trade Accs', () => {
             //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
             //TradeAccPage.enterTradeAccPassword();
-            //todo папки с маленькой буквы
         })
     })
 })
