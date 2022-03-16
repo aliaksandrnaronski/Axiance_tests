@@ -18,13 +18,13 @@ describe('Create Trade Accs', () => {
         return false;
     });
 
-    it('Positive: Login on CySEC with CySEC data', () => {
+    /*it('Positive: Login on CySEC with CySEC data', () => {
         cy.log('WHEN User goes to the Login page')
         LoginPage.open()
         cy.log('AND Clicks sign in button')
         LoginPage.clickSignIn()
         cy.log('AND Clicks CYSEC button')
-        LoginPage.clickCySECIcon()})
+        LoginPage.clickCySECIcon()})*/
 
     it('New url', () => {
         cy.get('@loginData').then((loginData) => {

@@ -65,10 +65,6 @@ class TradeAccPage {
     get searchContainer(){
         return cy.get('.styles_container__1O3h2')
     }
-    amount= '#amount'
-    leverage= '#leverage'
-    currency= '#currency'
-    value= '.css-13vhyk2-option'
 
     clickAccountsTab(){
         this.searchAccountsTab.contains("Accounts").click();
@@ -104,7 +100,7 @@ class TradeAccPage {
         this.searchTab.contains("Trading History").click();
     }
     clickTabDemo(){
-        this.searchTabDemo.contains("Demo accounts").click();
+        this.searchTabDemo.contains("Demo Accounts").click();
     }
     clickButtonDeposit(){
         this.searchButtonDeposit.click();
@@ -128,6 +124,10 @@ class TradeAccPage {
     clickButtonGoToPlatform(){
         this.searchButtonGoToPlatform.click();
     }
+    amount= '#amount'
+    leverage= '#leverage'
+    currency= '#currency'
+    value= '.css-13vhyk2-option'
     pickRandomLeverageFSA(randomLeverageFSA){
         //let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
         cy.get(`${(this.leverage)}`).click()

@@ -9,14 +9,14 @@ describe('Login', () => {
         return false;
     });
 
-    it('Negative: Login on CySEC with FSA data', () => {
+   /* it('Negative: Login on CySEC with FSA data', () => {
         cy.log('WHEN User goes to the Login page')
         LoginPage.open()
         cy.log('AND Clicks sign in button')
         LoginPage.clickSignIn()
         cy.log('AND Clicks CYSEC button')
         LoginPage.clickCySECIcon()
-    })
+    })*/
 
     it('New url', () => {
         cy.get('@loginData').then((loginData) => {

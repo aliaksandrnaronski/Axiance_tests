@@ -3,7 +3,9 @@
   "integrationFolder": "cypress/all-tests",
   "projectId": "u1yaan",
   "env": {
-    "axianceURL": "https://axiance.com/"
+    "axianceURL": "https://axiance.com/",
+    "axianceURLFSA": "https://test.axiance.com/int/sign-in",
+    "axianceURLCYSEC": "https://test.axianceeu.com/sign-in"
   },
   "viewportWidth": 1025,
   "viewportHeight": 800,

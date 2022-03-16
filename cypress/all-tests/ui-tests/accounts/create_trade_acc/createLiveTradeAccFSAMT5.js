@@ -19,12 +19,12 @@ describe('Create Trade Accs', () => {
 
     it('Create Live Trade Acc FSA', () => {
         cy.get('@loginData').then((loginData) => {
-            cy.log('WHEN User goes to the Login page');
+           /* cy.log('WHEN User goes to the Login page');
             LoginPage.open();
             cy.log('AND Clicks sign in button');
             LoginPage.clickSignIn();
             cy.log('AND Clicks FSA button');
-            LoginPage.clickFSAIcon();
+            LoginPage.clickFSAIcon();*/
             cy.log('THEN User goes to the FSA Login page');
             LoginPage.openNewUrlFSA();
             cy.log('AND Enter email FSA and password(valid data)');

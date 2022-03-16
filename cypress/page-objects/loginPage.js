@@ -28,10 +28,10 @@ class LoginPage {
         this.searchCySECIcon.should("be.visible").click();
     }
     openNewUrlFSA(){
-        cy.visit('https://client.axiance.com/int/sign-in?', {failOnStatusCode: false})
+        cy.visit(`${Cypress.env('axianceURLFSA')}`, {failOnStatusCode: false})
     }
     openNewUrlCySEC(){
-        cy.visit('https://client.axianceeu.com/sign-in?', {failOnStatusCode: false})
+        cy.visit(`${Cypress.env('axianceURLCYSEC')}`, {failOnStatusCode: false})
     }
     login(email,password){
         this.searchEmailInput.type(`${email}{enter}`);
