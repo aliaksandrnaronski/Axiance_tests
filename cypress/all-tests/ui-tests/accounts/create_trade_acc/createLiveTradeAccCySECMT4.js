@@ -52,7 +52,7 @@ describe('Create Trade Accs', () => {
             TradeAccPage.pickRandomCurrency(randomCurrency)
             //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
-            TradeAccPage.enterTradeAccPassword();
+            TradeAccPage.enterTradeAccPassword(loginData.password);
             TradeAccPage.searchTradeAccWindow.should("not.exist");
         })
     })

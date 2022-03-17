@@ -15,7 +15,7 @@ class TradeAccPage {
         return cy.get('.css-13vhyk2-option')
     }
     get searchPasswordInput(){
-        return cy.get('.style_wrapperInput__36oUg')
+        return cy.get('#password')
     }
     get searchTab(){
         return cy.get('.styles_tabHeader__3Rgp7.styles_tabHeader__3fJiL')

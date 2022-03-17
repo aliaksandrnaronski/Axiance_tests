@@ -36,7 +36,7 @@ describe('Create Trade Accs', () => {
             cy.log('AND Click button "Create trade acc"')
             TradeAccPage.clickCreateAccButton();
             cy.log('AND Click demo tab')
-            TradeAccPage.clickDemoTradeAcc();
+            TradeAccPage.clickLiveTradeAcc();
             cy.log('AND Click on platform dropdown')
             TradeAccPage.clickChoosePlatform();
             cy.log('AND Choose MT5 platform')
@@ -50,7 +50,7 @@ describe('Create Trade Accs', () => {
             TradeAccPage.pickRandomCurrency(randomCurrency)
             //cy.chooseRandomAmountAndCurrency();
             cy.log('AND Enter TA password')
-            TradeAccPage.enterTradeAccPassword();
+            TradeAccPage.enterTradeAccPassword(loginData.password);
             TradeAccPage.searchTradeAccWindow.should("not.exist");
         })
     })
