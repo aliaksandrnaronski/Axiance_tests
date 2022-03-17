@@ -127,18 +127,31 @@ class TradeAccPage {
     clickButtonGoToPlatform(){
         this.searchButtonGoToPlatform.click();
     }
-    amount= '#amount'
-    leverage= '#leverage'
-    currency= '#currency'
-    value= '.css-13vhyk2-option'
+
+    get searchAmount(){
+        return cy.get('#amount')
+    }
+    get searchLeverage(){
+        return cy.get('#leverage')
+    }
+    get searchValue(){
+        return cy.get('.css-13vhyk2-option')
+    }
+    get searchCurrency(){
+        return cy.get('#currency')
+    }
+    //amount= '#amount'
+    //leverage= '#leverage'
+    //currency= '#currency'
+    //value= '.css-13vhyk2-option'
     pickRandomLeverageFSA(randomLeverageFSA){
         //let randomLeverageFSA = chance.pickone(tradeAccData.leveragesFSA).leverage
-        cy.get(`${(this.leverage)}`).click()
-        cy.get(`${(this.value)}`).contains(randomLeverageFSA).click()
+        this.searchLeverage.click()
+        this.searchValue.contains(randomLeverageFSA).click()
     }
     pickRandomLeverageCYSEC(randomLeverageCySEC){
-        cy.get(`${(this.leverage)}`).click()
-        cy.get(`${(this.value)}`).contains(randomLeverageCySEC).click()
+        this.searchLeverage.click()
+        this.searchValue.contains(randomLeverageCySEC).click()
     }
     /*pickRandomLeverageProfCYSEC(randomLeverageProfCySEC){
         //let randomLeverageProfCySEC = chance.pickone(tradeAccData.leveragesProfCySEC).leverage
@@ -146,14 +159,17 @@ class TradeAccPage {
         cy.get(`${(this.value)}`).contains(randomLeverageProfCySEC).click()
     }*/
     pickRandomCurrency(randomCurrency){
-        cy.get(`${(this.currency)}`).click()
-        cy.get(`${(this.value)}`).contains(randomCurrency).click()
+        this.searchCurrency.click()
+        this.searchValue.contains(randomCurrency).click()
     }
     pickRandomAmountAndCurrency(randomAmount, randomCurrency){
-        cy.get(`${(this.currency)}`).click()
-        cy.get(`${(this.value)}`).contains(randomCurrency).click()
-        cy.get(`${(this.amount)}`).click()
-        cy.get(`${(this.value)}`).contains(randomAmount+" "+randomCurrency).click()
+        this.searchCurrency.click()
+        this.searchValue.contains(randomCurrency).click()
+        this.searchAmount.click()
+        this.searchValue.then(($el) => {
+            cy.wrap($el).contains(randomAmount+" "+randomCurrency).click()
+        })
+        //this.searchValue.contains(randomAmount+" "+randomCurrency).click()
     }
 
 }

@@ -17,15 +17,15 @@ In order to run testing script at your own machine perform the following instruc
 Project URL: https://github.com/aliaksandrnaronski/Axiance_tests/tree/main/cypress
 
 For example, you may load the project using the command line:
-
+```
 git clone https://github.com/aliaksandrnaronski/Axiance_tests/tree/main/cypress.git
-
+```
 2.2 Install components
 
 As soon as project is loaded, go to the root and perform command:
-
+```
 npm install
-
+```
 It will install all components based on package.json file into node_modules folder.
 
 2.3 As soon as components are loaded you may run testing scripts.
@@ -35,19 +35,19 @@ It will install all components based on package.json file into node_modules fold
 If you are not interested in seeing GUI while tests execution you may run tests in Electron https://www.npmjs.com/package/electron.
 
 To run all tests in Electron:
-
+```
 npx cypress run
-
+```
 If you prefer to see the application GUI while tests execution you may run tests in Chrome.
 
 To run all tests in Chrome:
-
+```
 npx cypress run -b chrome
-
+```
 In order to get the report in the Cypress Dashboard you should add some more parameters:
-
+```
 npx cypress run -b chrome --record --key 4b950be2-8bf0-4a54-8ce7-0f18b5d246a7
-
+```
 --record means that transfer results to the Cypress Dashboard is on.
 
 --key parameter followed by value 4b950be2-8bf0-4a54-8ce7-0f18b5d246a7 is used for access to project in the Cypress Dashboard.
@@ -55,17 +55,17 @@ npx cypress run -b chrome --record --key 4b950be2-8bf0-4a54-8ce7-0f18b5d246a7
 So, the command above will run testing scrips in Chrome and will create the report in the Cypress Dashboard.
 
 To do the same in a headless mode (Electron) use the following command:
-
+```
 npx cypress run --record --key 4b950be2-8bf0-4a54-8ce7-0f18b5d246a7
-
+```
 2.3.2 Run single test file
 
 Cypress provides the Test Runner that allows you to run testing files separately and see the execution process: https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview
 
 To open it use the following command:
-
+```
 npx cypress open
-
+```
 In the Test Runner you will see the list of testing files. You may click any of them and execution tests within a single it would be started in a separate window. Pay attention that results recording and reports creation is not performed if you use the Test Runner. So, this option is mostly for development and issues investigation. For running all the scope you should better use other options.
 
 3. Reporting
