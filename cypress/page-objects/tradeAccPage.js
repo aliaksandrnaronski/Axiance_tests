@@ -65,6 +65,9 @@ class TradeAccPage {
     get searchContainer(){
         return cy.get('.styles_container__1O3h2')
     }
+    get searchTradeAccWindow(){
+        return cy.get('.styles_modalContainer__2-u3F')
+    }
 
     clickAccountsTab(){
         this.searchAccountsTab.contains("Accounts").click();
