@@ -69,6 +69,7 @@ npx cypress open
 In the Test Runner you will see the list of testing files. You may click any of them and execution tests within a single it would be started in a separate window. Pay attention that results recording and reports creation is not performed if you use the Test Runner. So, this option is mostly for development and issues investigation. For running all the scope you should better use other options.
 
 3. Reporting
+
    3.1 Results are loaded into the Cypress Dashboard
    Link for the reporting project: https://dashboard.cypress.io/projects/u1yaan/runs 
 
