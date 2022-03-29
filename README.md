@@ -70,7 +70,7 @@ In the Test Runner you will see the list of testing files. You may click any of 
 
 3. Reporting
 
-   3.1 Results are loaded into the Cypress Dashboard
-   Link for the reporting project: https://dashboard.cypress.io/projects/u1yaan/runs 
+3.1 Results are loaded into the Cypress Dashboard
+Link for the reporting project: https://dashboard.cypress.io/projects/u1yaan/runs 
 
 Please, log in with your credentials - since the project is public you will be able to see results and report into this project in case of running of tests at your local env with the key.
